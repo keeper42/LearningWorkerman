@@ -247,8 +247,8 @@ class Gateway extends Worker
 		$this->_gatewayPort = substr(strrchr($socket_name,':'),1);
         $this->router = array("\\GatewayWorker\\Gateway", 'routerBind');
 
-        $backtrace               = debug_backtrace();
-        $this->_autoloadRootPath = dirname($backtrace[0]['file']);
+        $backrace                = debug_backtrace();
+        $this->_autoloadRootPath = dirname($backrace[0]['file']);
     }
 
     /**
@@ -480,7 +480,6 @@ class Gateway extends Worker
         // 初始化 gateway 内部的监听，用于监听 worker 的连接已经连接上发来的数据
         $this->_innerTcpWorker = new Worker("GatewayProtocol://{$this->lanIp}:{$this->lanPort}");
         $this->_innerTcpWorker->listen();
-	$this->_innerTcpWorker->name = 'GatewayInnerWorker';
 
         // 重新设置自动加载根目录
         Autoloader::setRootPath($this->_autoloadRootPath);
