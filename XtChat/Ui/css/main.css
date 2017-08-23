@@ -1,0 +1,152 @@
+.i_warp{
+    width:500px;
+    height:500px;
+    margin:20px auto 0;
+    box-shadow:0 0 20px #c7c7c7;
+    border-radius:3px;
+}
+.i_warp .i_warp_header{
+    background-color: #f3f3f3;
+    height:60px;
+}
+.i_warp .i_warp_header h2{
+    color: #5e5e5e;
+    font-size:18px;
+    font-weight:200;
+    height:40px;
+    width:200px;
+    float:left;
+    margin:10px;
+    line-height:40px;
+}
+.i_warp .i_warp_header #user_avatar{
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    float:left;
+    margin:10px;
+}
+.i_warp .i_warp_content{
+    height:320px;
+    overflow:hidden;
+}
+.i_warp .i_warp_footer{
+    border-top:1px solid #e8e8e8;
+    height:110px;
+}
+.i_warp .i_warp_footer #chat_input{
+    border:none;
+    resize:none;
+    width:490px;
+    height:70px;
+    display:block;
+    font-size:14px;
+    color:#444;
+    margin:5px auto 0;
+}
+.i_warp .i_warp_footer #sendMessage{
+    float:right;
+    margin-right:10px;
+    background-color:#46adff;
+    color:#fff;
+    width:70px;
+    text-align:center;
+    line-height:28px;
+    font-size:14px;
+    height:30px;
+    border-radius:3px;
+    transition:.2s;
+}
+.i_warp .i_warp_footer #sendMessage:hover{
+    background-color: #3a91d5;
+
+}
+.onlineCount{
+    float:right;
+    height:60px;
+    line-height:60px;
+    margin-right:10px;
+    font-size:14px;
+    color:#777;
+}
+.onlineCount #onlineCount{
+    color:#46adff;
+}
+.chatMessageWarp{
+
+    overflow-y:auto;
+    height:320px;
+}
+.chatMessageWarp li{
+    padding-left:5px;
+}
+.message1{
+    padding-right:10px;
+    overflow:hidden;
+}
+.message2{
+    padding-right:10px;
+    overflow:hidden;
+}
+.message3{
+    border-radius:3px;
+    text-align:center;
+    background-color: #eeeeee;
+    width:200px;
+    padding:2px 5px;
+    color: #2ca24f;
+    margin:5px auto;
+}
+.message5{
+    border-radius:3px;
+    text-align:center;
+    background-color: #eeeeee;
+    width:200px;
+    padding:2px 5px;
+    color: #7f7f7f;
+    margin:5px auto;
+}
+.message4{
+    border-radius:3px;
+    text-align:center;
+    background-color: #eeeeee;
+    width:200px;
+    padding:2px 5px;
+    color: #c33d41;
+    margin:5px auto;
+}
+.message3 span{
+    text-align:center;
+}
+.message1 img{
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    float:left;
+    margin:5px;
+}
+.message1 p{
+    padding:4px 5px;
+    border-radius:3px;
+    margin-top:10px;
+    overflow:hidden;
+    margin-right:30px;
+    background-color: #e2e2e2;
+}
+
+.message2 img{
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    float:right;
+    margin:5px;
+}
+.message2 p{
+    padding:4px 5px;
+    border-radius:3px;
+    margin-top:10px;
+    overflow:hidden;
+    margin-left:30px;
+    background-color: #e2e2e2;
+}
+

@@ -1,0 +1,122 @@
+/*初始化*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, div {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #222;
+    font-size: 13px;
+    outline: none;
+}
+*::selection {
+    color: #48aec4;
+    background: #DCDCDC;
+}
+*::-moz-selection {
+    color: #48aec4;
+    background: #DCDCDC;
+}
+img {
+    border: none;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+em {
+    font-style: normal;
+}
+
+em {
+    font-style: normal;
+}
+ul li{
+    list-style:none;
+}
+
+header,nav,footer,article,section{
+    display: block;
+}
+
+#xt_confirm{
+    position:fixed;
+    z-index:1000;
+    height:100%;
+    width:100%;
+    display:none;
+}
+#xt_confirm #xt_acg_confirm{
+    overflow:hidden;
+    height:0;
+    box-shadow:0 0 5px #ccc;
+    border-top:2px solid #0fcae8;
+    border-bottom:2px solid #0fcae8;
+    background-color:rgba(0,0,0,0.7);
+    width:100%;
+    position:absolute;
+    top:50%;left:0;
+    transition:.3s;
+
+}
+#xt_confirm #xt_acg_confirm.show{
+    padding:10px 0;
+    height:80px;
+    margin-top:-50px;
+}
+#xt_confirm #xt_acg_confirm .acg_xt_content{
+    width:50%;
+    text-align:center;
+    font-size:22px;
+    font-weight:500;
+    margin:0 auto;
+    height:30px;
+    line-height:30px;
+    color:#fff;
+}
+#xt_confirm #xt_acg_confirm .acg_xt_action{
+    text-align:center;
+    margin-top:20px;
+}
+
+#xt_confirm #xt_acg_confirm .acg_xt_action a{
+    padding:5px 30px;
+    margin:0 5px;
+    border-radius:3px;
+    color:#fff;
+    transition:.3s;
+}
+#xt_confirm #xt_acg_confirm .acg_xt_action a#close{
+    background-color:#0fcae8;
+}
+#xt_confirm #xt_acg_confirm .acg_xt_action a#close:hover{
+    background-color: #0ebedb;
+}
+#xt_confirm #xt_acg_confirm .acg_xt_action a#success{
+    background-color: #ecbc33;
+}
+#xt_confirm #xt_acg_confirm .acg_xt_action a#success:hover{
+    background-color: #d2a72e;
+}
+
+#xt_toast{
+    position:fixed;
+    top:-60px;
+    height:50px;
+    z-index:999;
+    background-color:rgba(90,170,224,0.9);
+    padding:5px 0;
+    width:100%;
+    overflow:hidden;
+    cursor: pointer;
+}
+#xt_toast #xt_toast_acgxt{
+    width:90%;
+    margin:5px auto;
+    text-align:center;
+    color:#fff;
+    height:40px;
+    line-height:40px;
+    font-size:20px;
+    font-weight:400;
+}
