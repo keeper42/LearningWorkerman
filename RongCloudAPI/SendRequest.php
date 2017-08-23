@@ -20,18 +20,21 @@ class SendRequest
 
     /**
      * 创建http header参数
+     * API 调用签名规则, 所有请求融云服务端 API 接口的请求均使用此规则校验
+     * RC- 前缀的 HTTP Header 是为了适应某些 PaaS 平台（如 SAE）过滤特定 HTTP Header 的机制而考虑的，
+     * 如果您使用这些平台时遇到问题，可以使用 RC- 前缀，一般情况下使用默认的 HTTP Header 即可
      * @param array $data
-     * @return bool
+     * @return arrray
      */
     private function createHttpHeader() {
         $nonce = mt_rand();
         $timeStamp = time();
         $sign = sha1($this->appSecret.$nonce.$timeStamp);
         return array(
-                'RC-App-Key:'.$this->appKey,
-                'RC-Nonce:'.$nonce,
-                'RC-Timestamp:'.$timeStamp,
-                'RC-Signature:'.$sign,
+                'RC-App-Key:'.$this->appKey,        // string, 开发者平台分配的 App Key
+                'RC-Nonce:'.$nonce,                 // string, 随机数，无长度限制
+                'RC-Timestamp:'.$timeStamp,         // string, 时间戳，从 1970 年 1 月 1 日 0 点 0 分 0 秒开始到现在的秒数
+                'RC-Signature:'.$sign,              // string, 数据签名
         );
     }
 
