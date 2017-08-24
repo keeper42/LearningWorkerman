@@ -38,12 +38,6 @@ class Server{
             'name'=>$connection->id
         ]);
 
-
-
-
-
-
-
     }
     public function onMessage($connection,$data){
         if($data['type']=='public'){
@@ -78,10 +72,6 @@ class Server{
             $this->sendMessage($con,$data);
         }
     }
-
-
-
-
 
 }
 

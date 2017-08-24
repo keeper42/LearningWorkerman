@@ -20,8 +20,6 @@ $ws->onMessage = function($connection, $data) {
 	$server->onMessage($connection,json_decode($data,true));
 };
 
-
-
 // 运行worker
 Worker::runAll();
 
